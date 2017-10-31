@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  // 把a标签当作块级元素使用 div 
+  display: block;
+  // 继承父元素的颜色 
+  color: inherit;
+
+  // 在移动端 点击的操作  tap
+  // -webkit-tap-highlight-color: yellow;
+  -webkit-tap-highlight-color: transparent;
+}
+img{
+  // 默认3px
+  display: block;
+  width: 100%;
+}
+input{
+  border:none;
+  outline: none;
+}
+
+// 清除浮动
+.clearfix:after{
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
