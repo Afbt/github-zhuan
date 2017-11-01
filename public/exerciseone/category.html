@@ -32,26 +32,9 @@
                                     <div class="mui-scroll">
                                         <!--这里放置真实显示的DOM内容-->
                                         <ul>
-                                                <li class="active"><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
-                                                <li><a href="javascript:;">运动馆</a></li>
+                                            <!-- 通过模版引擎来渲染 一级分类 -->
                                                 
-                                            </ul>
+                                        </ul>
                                     </div>
                                 </div>
                         
@@ -63,24 +46,7 @@
                                         <div class="mui-scroll">
                                             <!--这里放置真实显示的DOM内容-->
                                             <ul class="lt_right_right mui-clearfix">
-                                                    <li><a href="javascript:;"><img src="./images/brand1.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand2.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand3.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand4.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
-                                                    <li><a href="javascript:;"><img src="./images/brand5.png" alt=""> <p>耐克</p></a></li>
+                                                <!-- 这里通过二级模版来勋渲染 -->
                                                     
                                             </ul>
                                         </div>
@@ -118,11 +84,37 @@
 
 </body>
 <script src="./assets/mui/js/mui.js"></script>
+<!-- 移动端的jq -->
 <script src="./assets/zepto/zepto.min.js"></script>
+<!-- 模版 -->
+<script src="./assets/artTemplate/template-native.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/category.js"></script>
-<script>
-    console.log(1);
+<!-- 写模版 一级分类的模版-->
+<script type="text/template" id="firstCat">
+    <%  for(var i=0; i <rows.length ; i++ ){%>
+        
+        <li class="<%= i==0 ?'active':'' %>">
+            <a href="javascript:;" data-id=<%= rows[i].id  %> > <%=rows[i].categoryName%></a>
+        </li>
+    <%}%>
 </script>
 
+<!-- 写模版 二级分类的模版 -->
+<script type="text/template" id="secondCat">
+    <%if(rows.length == 0) {%>
+        <p>暂无该数据</p>
+    <%} else {%>
+        <% for(var i = 0 ; i < rows.length ; i++ ) {%>
+        <li data-id=<%=rows[i].id%>>
+            <a href="javascript:;" data-id=<%=rows[i].categoryId %>>
+                <img src="<%=rows[i].brandLogo %>" alt=""> 
+                <p><%=rows[i].brandName %></p>
+            </a>
+        </li>
+        <% } %> 
+    <% } %>    
+</script>
+
+   
 </html>

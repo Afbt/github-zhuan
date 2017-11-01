@@ -10,6 +10,7 @@ body {
 .lt-container {
     height: 100%;
     width: 100%;
+    
 }
 
 
@@ -18,24 +19,31 @@ body {
 header {
     width: 100%;
     // height:.45rem;
+    position: fixed;
     .lt_head {
         padding: 0 0.45rem;
         text-align: center;
-        position: fixed;
+        position: relative;
         width: 100%;
         background-color: #006699;
+
         p {
-            line-height: .45rem;
+            line-height: 0.45rem;
             margin: 0;
             color: #ffffff;
-            font-size: 0.17rem;
+            font-size: 0.2rem;
         }
         a {
             position: absolute;
-            right: 0.15rem;
-            top: 0.15rem;
-            font-size: 0.2rem;
+            right: 0;
+            top:0;  
+
             color: #ffffff;
+            span{
+                display: block;
+                padding: 0.13rem;
+                font-size: 0.18rem;
+            }
         }
     }
 }
@@ -46,7 +54,7 @@ header {
 .lt-content {
     height: 100%;
     width: 100%;
-    padding: .45rem  0  .53rem  0;
+    padding: .44rem 0 .95rem 0;
 }
 
 
@@ -56,6 +64,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 9999;
     .lt-foot {
         width: 100%;
         text-align: center;
@@ -66,8 +75,12 @@ footer {
             width: 25%;
             font-size: 0.18rem;
             color: #fff;
+            span{
+                height: 0.18rem;
+                width: 0.13rem;
+            }
             p {
-                font-size: 0.12rem;
+                font-size: 0.17rem;
             }
         }
         .active {
