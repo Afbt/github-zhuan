@@ -1,0 +1,83 @@
+/* 初始 文件*/
+
+@import url('./base.less');
+
+/* rem */
+
+@import url('./media.less');
+
+/* 公共部分 头部跟底部*/
+
+@import url('./commonpart.less');
+.lt-content {
+    /* 主体 */
+    .lt_right {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        /* 侧边栏 */
+        .lt_left {
+            float: left;
+            width: 20%;
+            height: 100%;
+        background-color: #fff;
+
+        .lt_zhuan{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+            ul {
+                font-size: 0.18rem;
+                text-align: center;
+                color: #666;
+                height: 100%;
+                li {
+                    
+                    border-top: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    a{
+                        padding: 0.125rem 0;
+                    }
+                }
+                .active {
+                    border-top: 1px solid #666;
+                    border-right: 1px solid #666;
+                    background-color: #666;
+                    color: #fff;
+                    
+                }
+            }
+        }
+        /* 品牌展示 */
+    }
+    
+    .lt_right_content{
+        height: 100%;
+        padding: 0 0 0 20%;
+        .lt_zhuan{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            
+        }
+    }
+    .lt_right_right {
+        height: 100%;
+        text-align: center;
+        
+        li {
+            float: left;
+            background-color: #fff;
+            
+        }
+        li:nth-last-child(-n+3){
+            border-right:0.01rem solid #ccc;
+            border-bottom:0.01rem solid #ccc;
+        }
+        li:nth-last-child(2){
+            border-right:0.01rem solid #fff;
+
+        }
+    }
+}

@@ -1,0 +1,71 @@
+/* 初始 文件*/
+
+@import url("./base.less");
+
+/* rem */
+@import url('./media.less');
+
+/* 公共部分 头部跟底部*/
+@import url('./commonpart.less');
+.lt-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+/* 内容部分 */
+
+
+    .lt-zhuan{
+      height: 100%;
+      width: 100%;  
+      position: relative;
+      .mui-slider{
+        height: 3.93rem;
+      .mui-slider-indicator-zhuan{
+        bottom: 0.4rem
+      }
+      }
+      /* 导航栏start */
+    .lt_nav{
+      padding:.12rem ;
+      a{
+        float: left;
+        width: 33.33%;
+      }
+    }
+    /* 导航栏end */
+
+    /* 立即购买区start */
+    .lt_product{
+      text-align: center;
+      .item{
+        width: 50%;
+        float: left;
+        padding:0 .12rem .12rem .12rem;
+        .item_li{
+          box-shadow: 0 0 0.03rem #ccc;
+        >span{
+          font-size: 0.16rem;
+        }
+          p{
+            font-size:0.12rem; 
+            span{
+              color: red;
+            }
+          }
+          button  {
+            background-color: #007aff;
+            color: #fff;
+          }
+        }
+      }
+    }
+    /* 立即购买区end */
+    }
+
+
+

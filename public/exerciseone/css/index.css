@@ -1,0 +1,234 @@
+/* 初始 文件*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  display: block;
+  width: 100%;
+}
+input {
+  border: none;
+  outline: none;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* rem */
+@media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
+  html,
+  body {
+    font-size: 168.75px;
+  }
+}
+@media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+  html,
+  body {
+    font-size: 150px;
+  }
+}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  html,
+  body {
+    font-size: 125px;
+  }
+}
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  html,
+  body {
+    font-size: 112.5px;
+  }
+}
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  html,
+  body {
+    font-size: 93.75px;
+  }
+}
+@media only screen and (max-width: 540px), only screen and (max-device-width: 540px) {
+  html,
+  body {
+    font-size: 84.375px;
+  }
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  html,
+  body {
+    font-size: 75px;
+  }
+}
+@media only screen and (max-width: 414px), only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 64.6875px;
+  }
+}
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 62.5px;
+  }
+}
+@media only screen and (max-width: 375px), only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 58.59375px;
+  }
+}
+@media only screen and (max-width: 360px), only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 56.25px;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 240px), only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 37.5px;
+  }
+}
+/* 公共部分 头部跟底部*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+/* 头部 */
+header {
+  width: 100%;
+}
+header .lt_head {
+  padding: 0 0.45rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: #006699;
+}
+header .lt_head p {
+  line-height: .45rem;
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.17rem;
+}
+header .lt_head a {
+  position: absolute;
+  right: 0.15rem;
+  top: 0.15rem;
+  font-size: 0.2rem;
+  color: #ffffff;
+}
+/* 底部 */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer .lt-foot {
+  width: 100%;
+  text-align: center;
+  background-color: #006699;
+}
+footer .lt-foot a {
+  padding-top: 0.1rem;
+  float: left;
+  width: 25%;
+  font-size: 0.18rem;
+  color: #fff;
+}
+footer .lt-foot a p {
+  font-size: 0.12rem;
+  color: #fff;
+}
+footer .lt-foot .active {
+  color: #ff8c00;
+}
+footer .lt-foot .active p {
+  color: #ff8c00;
+}
+.lt-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+/* 内容部分 */
+.lt-content {
+  height: 100%;
+  width: 100%;
+  padding: 0.45rem 0 0.52rem 0;
+}
+.lt-content .lt-zhuan {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* 导航栏start */
+  /* 导航栏end */
+  /* 立即购买区start */
+  /* 立即购买区end */
+}
+.lt-content .lt-zhuan .mui-slider {
+  height: 3.93rem;
+}
+.lt-content .lt-zhuan .mui-slider .mui-slider-indicator-zhuan {
+  bottom: 0.4rem;
+}
+.lt-content .lt-zhuan .lt_nav {
+  padding: .12rem ;
+}
+.lt-content .lt-zhuan .lt_nav a {
+  float: left;
+  width: 33.33%;
+}
+.lt-content .lt-zhuan .lt_product {
+  text-align: center;
+}
+.lt-content .lt-zhuan .lt_product .item {
+  width: 50%;
+  float: left;
+  padding: 0 .12rem .12rem .12rem;
+}
+.lt-content .lt-zhuan .lt_product .item .item_li {
+  box-shadow: 0 0 0.03rem #ccc;
+}
+.lt-content .lt-zhuan .lt_product .item .item_li > span {
+  font-size: 0.16rem;
+}
+.lt-content .lt-zhuan .lt_product .item .item_li p {
+  font-size: 0.12rem;
+}
+.lt-content .lt-zhuan .lt_product .item .item_li p span {
+  color: red;
+}
+.lt-content .lt-zhuan .lt_product .item .item_li button {
+  background-color: #007aff;
+  color: #fff;
+}

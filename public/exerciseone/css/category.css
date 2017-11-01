@@ -1,0 +1,249 @@
+/* 初始 文件*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  display: block;
+  width: 100%;
+}
+input {
+  border: none;
+  outline: none;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* rem */
+@media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
+  html,
+  body {
+    font-size: 168.75px;
+  }
+}
+@media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+  html,
+  body {
+    font-size: 150px;
+  }
+}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  html,
+  body {
+    font-size: 125px;
+  }
+}
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  html,
+  body {
+    font-size: 112.5px;
+  }
+}
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  html,
+  body {
+    font-size: 93.75px;
+  }
+}
+@media only screen and (max-width: 540px), only screen and (max-device-width: 540px) {
+  html,
+  body {
+    font-size: 84.375px;
+  }
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  html,
+  body {
+    font-size: 75px;
+  }
+}
+@media only screen and (max-width: 414px), only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 64.6875px;
+  }
+}
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 62.5px;
+  }
+}
+@media only screen and (max-width: 375px), only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 58.59375px;
+  }
+}
+@media only screen and (max-width: 360px), only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 56.25px;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 240px), only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 37.5px;
+  }
+}
+/* 公共部分 头部跟底部*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+/* 最大容器 */
+.lt-container {
+  height: 100%;
+  width: 100%;
+}
+/* 头部 */
+header {
+  width: 100%;
+}
+header .lt_head {
+  padding: 0 0.45rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: #006699;
+}
+header .lt_head p {
+  line-height: .45rem;
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.17rem;
+}
+header .lt_head a {
+  position: absolute;
+  right: 0.15rem;
+  top: 0.15rem;
+  font-size: 0.2rem;
+  color: #ffffff;
+}
+/* 公共内容 */
+.lt-content {
+  height: 100%;
+  width: 100%;
+  padding: .45rem  0  .53rem  0;
+}
+/* 底部 */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer .lt-foot {
+  width: 100%;
+  text-align: center;
+  background-color: #006699;
+}
+footer .lt-foot a {
+  padding-top: 0.1rem;
+  float: left;
+  width: 25%;
+  font-size: 0.18rem;
+  color: #fff;
+}
+footer .lt-foot a p {
+  font-size: 0.12rem;
+}
+footer .lt-foot .active {
+  color: #ff8c00;
+}
+.lt-content {
+  /* 主体 */
+}
+.lt-content .lt_right {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* 侧边栏 */
+  /* 品牌展示 */
+}
+.lt-content .lt_right .lt_left {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+}
+.lt-content .lt_right .lt_left .lt_zhuan {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.lt-content .lt_right .lt_left ul {
+  font-size: 0.18rem;
+  text-align: center;
+  color: #666;
+  height: 100%;
+}
+.lt-content .lt_right .lt_left ul li {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.lt-content .lt_right .lt_left ul li a {
+  padding: 0.125rem 0;
+}
+.lt-content .lt_right .lt_left ul .active {
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  background-color: #666;
+  color: #fff;
+}
+.lt-content .lt_right_content {
+  height: 100%;
+  padding: 0 0 0 20%;
+}
+.lt-content .lt_right_content .lt_zhuan {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.lt-content .lt_right_right {
+  height: 100%;
+  text-align: center;
+}
+.lt-content .lt_right_right li {
+  float: left;
+  background-color: #fff;
+}
+.lt-content .lt_right_right li:nth-last-child(-n+3) {
+  border-right: 0.01rem solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
+}
+.lt-content .lt_right_right li:nth-last-child(2) {
+  border-right: 0.01rem solid #fff;
+}
