@@ -1,0 +1,63 @@
+// 初始化文件
+@import url('./base.less');
+// 媒体查询     rem
+@import url('./media.less');
+// 公共部分样式
+@import url('./commonpart.less');
+/* 头部 */
+.lt_head{
+  .lt_head_left{
+    left: 0;
+    top: 0;
+  }
+}
+
+/* 内容部分　start */
+.lt_content_border{
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 0.1rem;
+  /* 搜索框 */
+  .search{
+    font-size: .16rem;
+    position: relative;
+    color: #fff;
+    input[type='search']{
+      height: 0.3rem;
+      border-radius: .05rem .05rem  .05rem .05rem;
+      font-size: .12rem;
+      // text-indent:0.2rem;
+      text-align: left;
+      border: 1px solid #007aff;
+      background-color: #fff;
+      color: #000;
+    }
+    a{
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #007aff;
+      padding: 0.04rem 0.15rem; 
+      border-radius: 0 .05rem  .05rem 0;
+    }
+  }
+ /*  搜索历史记录 */
+  .lt_content_record{
+    span{
+      font-size:0.12rem; 
+      display: block;
+      line-height: 0.12rem;
+    }
+    span:nth-of-type(1){
+      float: left;
+    }
+    span:nth-of-type(2) {
+      float: right;
+      font-size:0.12rem;
+    }
+  }
+}
+
+/* 内容部分　end */
+

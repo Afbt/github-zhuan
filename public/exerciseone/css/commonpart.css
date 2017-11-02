@@ -28,8 +28,6 @@ header .lt_head p {
 }
 header .lt_head a {
   position: absolute;
-  right: 0;
-  top: 0;
   color: #ffffff;
 }
 header .lt_head a span {
@@ -37,11 +35,19 @@ header .lt_head a span {
   padding: 0.13rem;
   font-size: 0.18rem;
 }
+header .lt_head a:nth-of-type(2) {
+  right: 0;
+  top: 0;
+}
 /* 公共内容 */
 .lt-content {
   height: 100%;
   width: 100%;
-  padding: .44rem 0 .95rem 0;
+  padding: .44rem  0  .5rem  0;
+}
+.lt-content .lt_zhuan {
+  height: 100%;
+  width: 100%;
 }
 /* 底部 */
 footer {
@@ -54,20 +60,20 @@ footer .lt-foot {
   width: 100%;
   text-align: center;
   background-color: #006699;
+  position: relative;
 }
 footer .lt-foot a {
   padding-top: 0.1rem;
   float: left;
   width: 25%;
-  font-size: 0.18rem;
   color: #fff;
 }
 footer .lt-foot a span {
-  height: 0.18rem;
-  width: 0.13rem;
+  font-size: 0.2rem;
+  display: block;
 }
 footer .lt-foot a p {
-  font-size: 0.17rem;
+  font-size: 0.2rem;
 }
 footer .lt-foot .active {
   color: #ff8c00;

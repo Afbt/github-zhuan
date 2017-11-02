@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <title>乐淘首页</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.css" />
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css1/common.css">
+    <link rel="stylesheet" href="./css1/searchList.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="lt-container">
+        <div class="lt-header">
+            <a href="javascript:history.back()" class="lt-top-lbtn fa fa-arrow-left"></a>
+            <h3>乐淘云购</h3>
+            <a href="search.html" class="lt-top-rbtn fa fa-search"></a>
+        </div>
+        <div class="lt-content">
+            <div class="lt-wrapper">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--用户输入搜索块-->
+                        <div class="lt-search">
+                            <input type="text" placeholder="请输入商品名称" id="userInput">
+                            <a href="javascript:;" class="mui-btn-blue">搜索</a>
+                        </div>
+                        <!--排序块-->
+                        <div class="lt-order">
+                            <a href="javascript:;" class="active" data-type="time">
+                                <span>上架时间</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <a href="javascript:;" data-type="price">
+                                <span>价格</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <a href="javascript:;" data-type="num">
+                                <span>销量</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <a href="javascript:;" data-type="discount">
+                                <span>折扣</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                        </div>
+                        <!--搜索产品结果展示区域-->
+                        <div class="lt-product">
+                            <ul class="mui-clearfix">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lt-foot">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="category.html">
+                        <span class="fa fa-bars"></span>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-user"></span>
+                        <p>个人中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./assets/mui/js/mui.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
+    <script src="./js1/common.js"></script>
+    <script src="./js1/index.js"></script>
+    <script src="./js1/searchList.js"></script>
+
+    <script type="text/template" id="porductList">
+        <% if (data.length == 0)  {%>
+            <p>抱歉没有该商品。。。。。。。</p>
+        <%} else{%>    
+            <%for(var i = 0 ; i < data.length; i++) {%>
+                <li>
+                    <a href="javascript:;" data-id="<%=data[i].id%>">
+                        <!-- 如果没有照片的数据传入    就显示一张默认的 onerror="this.img='./exerciseone/images/none.jpg'"-->
+                        <img src="<%=data[i].pic[0].picAddr%>" alt="" onerror="this.img='./exerciseone/images/none.jpg'">
+
+                        <span class="mui-ellipsis-2">
+                            <%=data[i].proName%>
+                        </span>
+                        <p style='text-align:center'>
+                            <span class="lt-pro-price">&yen;<%=data[i].price%></span>
+                            &nbsp;&nbsp;
+                                <del>&yen;<%=data[i].oldPrice%></del>
+                        </p>
+                        <button class="mui-btn-blue">立即购买</button>
+                    </a>
+                </li>
+                <%}%>
+        <%}%>      
+    </script>
+
+</body>
+
+</html>

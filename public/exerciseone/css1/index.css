@@ -1,0 +1,11 @@
+.lt-nav{
+    padding:10px 10px 0;
+}
+.lt-nav > a{
+    width: 33.33%;
+    float: left;
+}
+.lt-nav > a > img{
+    width: 100%;
+    display: block;
+}

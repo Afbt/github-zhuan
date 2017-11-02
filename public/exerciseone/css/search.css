@@ -1,4 +1,3 @@
-/* 初始 文件*/
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +33,6 @@ input {
   visibility: hidden;
   clear: both;
 }
-/* rem */
 @media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
   html,
   body {
@@ -119,7 +117,6 @@ input {
     font-size: 37.5px;
   }
 }
-/* 公共部分 头部跟底部*/
 html,
 body {
   height: 100%;
@@ -200,68 +197,52 @@ footer .lt-foot a p {
 footer .lt-foot .active {
   color: #ff8c00;
 }
-.lt-content {
-  /* 主体 */
+/* 头部 */
+.lt_head .lt_head_left {
+  left: 0;
+  top: 0;
 }
-.lt-content .lt_right {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  /* 侧边栏 */
-  /* 品牌展示 */
-}
-.lt-content .lt_right .lt_left {
-  float: left;
-  width: 20%;
-  height: 100%;
+/* 内容部分　start */
+.lt_content_border {
   background-color: #fff;
-}
-.lt-content .lt_right .lt_left .lt_zhuan {
   height: 100%;
   width: 100%;
+  padding: 0.1rem;
+  /* 搜索框 */
+  /*  搜索历史记录 */
+}
+.lt_content_border .search {
+  font-size: .16rem;
   position: relative;
-}
-.lt-content .lt_right .lt_left ul {
-  font-size: 0.18rem;
-  text-align: center;
-  color: #666;
-  height: 100%;
-}
-.lt-content .lt_right .lt_left ul li {
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-.lt-content .lt_right .lt_left ul li a {
-  padding: 0.125rem 0;
-}
-.lt-content .lt_right .lt_left ul .active {
-  border-top: 1px solid #666;
-  border-right: 1px solid #666;
-  background-color: #666;
   color: #fff;
 }
-.lt-content .lt_right_content {
-  height: 100%;
-  padding: 0 0 0 20%;
-}
-.lt-content .lt_right_content .lt_zhuan {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.lt-content .lt_right_right {
-  height: 100%;
-  text-align: center;
-}
-.lt-content .lt_right_right li {
-  float: left;
+.lt_content_border .search input[type='search'] {
+  height: 0.3rem;
+  border-radius: .05rem .05rem  .05rem .05rem;
+  font-size: .12rem;
+  text-align: left;
+  border: 1px solid #007aff;
   background-color: #fff;
-  width: 33.33%;
+  color: #000;
 }
-.lt-content .lt_right_right li:nth-last-child(-n+3) {
-  border-right: 0.01rem solid #ccc;
-  border-bottom: 0.01rem solid #ccc;
+.lt_content_border .search a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #007aff;
+  padding: 0.04rem 0.15rem;
+  border-radius: 0 .05rem  .05rem 0;
 }
-.lt-content .lt_right_right li:nth-last-child(2) {
-  border-right: 0.01rem solid #fff;
+.lt_content_border .lt_content_record span {
+  font-size: 0.12rem;
+  display: block;
+  line-height: 0.12rem;
 }
+.lt_content_border .lt_content_record span:nth-of-type(1) {
+  float: left;
+}
+.lt_content_border .lt_content_record span:nth-of-type(2) {
+  float: right;
+  font-size: 0.12rem;
+}
+/* 内容部分　end */

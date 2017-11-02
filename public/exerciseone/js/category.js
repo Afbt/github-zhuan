@@ -1,4 +1,5 @@
 $(function () {
+  
   $.ajax({
     // 请求方式
     type:'get',
@@ -12,6 +13,7 @@ $(function () {
       /* 如果返回值是数组就在模版方法中将数组包装为对象 例如{items:rows}*/
       // 这里只是加载一个一级分类
        /* 通过模版 把数据动态生成html的 */
+       console.log(rows);
       var html = template('firstCat',rows);
       // 页面渲染
       $('.lt_left ul').html(html);
