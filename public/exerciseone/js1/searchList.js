@@ -9,8 +9,6 @@ $(function(){
           pageSize:100
         }
         var loadData = function (pa1) { 
-        // ajax
-
         $.ajax({
           // 请求方式
           type:"get",
@@ -77,11 +75,24 @@ $(function(){
       location.href = "searchList.html?key="+value;
       });
 
-
-
     // 排序操作 
     $('.lt-order [data-type]').on('tap',function () {
-      
+        var active = $('.lt-order [data-type].active').find('span:last-of-type');
+        // 判断判断是升还是降
+        //  （1升序，2降序）
+      if( active.hasClass('fa-angle-down') ){
+        var decide = false;
+        // 移出指定指定类名
+        active.removeClass('fa-angle-down');
+        // addClass为每个匹配的元素添加指定的类名。
+        active.addClass('fa-angle-up');
+      }else{
+        var decide = true;
+        // 移出指定类名
+        active.removeClass('fa-angle-up');
+        // addClass为每个匹配的元素添加指定的类名。
+        active.addClass('fa-angle-down');
+      }
       // 去除所有兄弟元素class的 active 但不包括自己
       $(this).siblings().removeClass('active');
       // addClass为每个匹配的元素添加指定的类名。
@@ -89,13 +100,14 @@ $(function(){
       // 获得点击的排序的a标签 的自定义属性
       var type = $(this).data('type');
       // 检查当前的元素是否含有某个特定的类，如果有，则返回true。hasClass
-      var orderType = $(this).find('span:last-of-type').hasClass('fa-angle-down')?2:1;
+      var orderType = decide?2:1;
       // 新建个空的对象
       var pa1 = {};
       // 给pa1里添加属性 值
       pa1[type] = orderType;
+      console.log(pa1[type]);
       // 调用前面封装好的函数
-      loadData(pa1);
+      // loadData(pa1);
     })
 });
 
