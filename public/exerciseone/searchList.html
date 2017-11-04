@@ -101,7 +101,7 @@
         <%} else{%>    
             <%for(var i = 0 ; i < data.length; i++) {%>
                 <li>
-                    <a href="javascript:;" data-id="<%=data[i].id%>">
+                    <a href="product-detail.html?id=<%=data[i].id%>" data-id="<%=data[i].id%>">
                         <!-- 如果没有照片的数据传入    就显示一张默认的 onerror="this.img='./exerciseone/images/none.jpg'"-->
                         <img src="<%=data[i].pic[0].picAddr%>" alt="" onerror="this.img='./exerciseone/images/none.jpg'">
 
